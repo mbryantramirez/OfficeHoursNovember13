@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">OfficeHoursNov13</string>
+    <string name="toast">Toast</string>
+    <string name="load_image">Load Image</string>
+    <string name="puppy_api_image">Puppy API Image</string>
+</resources>
