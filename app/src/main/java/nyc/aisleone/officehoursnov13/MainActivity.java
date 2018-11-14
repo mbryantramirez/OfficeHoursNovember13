@@ -28,9 +28,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // instantiate all the views
+        init();
+    }
+
+    private void init() {
+
         puppyImage = findViewById(R.id.iv_puppy_image);
+
+        /* Set OnClickListener on button since we are implementing the OnClickListener interface in our main activity
+            the input will be this activities OnClickListener
+         */
         toastButton = findViewById(R.id.toast_button);
         toastButton.setOnClickListener(this);
         loadImageButton = findViewById(R.id.load_image_button);
@@ -39,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        //Switch looks at the specific id of each button and run specific actions
         switch (v.getId()) {
             case R.id.toast_button:
                 Toast.makeText(this, "Button Press", Toast.LENGTH_LONG).show();
@@ -52,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loadImage() {
-
+        // Ignore for now
         Call<PuppyItem> puppyItemCall = newsService.getPuppyImage();
 
         puppyItemCall.enqueue(new Callback<PuppyItem>() {

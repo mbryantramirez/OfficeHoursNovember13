@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--I'm using constraint layout and im setting the constraints for the left and right of each View
+        to the size of its parent and im setting the ImageViews constraint to the top of the screen
+
+        Constraints set the views position within the Constraint Layout
+        You will need at least one vertical and one horizontal constraint
+
+        Use the design editor to set the position of each view
+        or add padding margins and bias's in the text editor -->
+
     <ImageView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
